@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grey {
+  color: #515151;
+}
+
+.orange {
+  color: #FF3C00;
+}
+
+.orange-background {
+  background-color: #FF3C00;
+}
+
+
+.orange-border {
+  border: 3px solid #FF3C00;
+}
+
+.orange-button:hover {
+  background-color: #FF3C00;
+  color: white
+}
+
+.orange-bg-button:hover {
+  background-color: white;
+  color: #FF3C00;
+}
+
+
+
+.shadowed {
+  box-shadow:5px 5px 20px rgba(0,0,0,0.4)
+}
+
+.bg-grad-grey {
+  background: linear-gradient(#696969, #1f1f1f)
+}
+
+.heading {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+}
+
+.filter-nav-1 {
+  width : 300px; 
+}
+
+.nav-link:hover {
+  color: #FF3C00;
+}
+
+.order-card:hover {
+  border: 2px solid #FF3C00;
+  padding: 4px;
+}
+
+.order-card-bordered {
+  border: 2px solid #FF3C00;
+  padding: 4px;
+}
+
+.custom-select:hover {
+  text-decoration: underline;
+  color: #FF3C00;
+  cursor: pointer;
+}
+
+.order-select option:hover {
+  background-color: #FF3C00;
+}
