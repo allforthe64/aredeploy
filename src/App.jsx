@@ -20,7 +20,6 @@ import { Login } from './components/Login'
 import Admin from './components/Admin'
 import Layout from './components/Layout'
 import PersistLogin from './components/PersistLogin'
-import CustomOrder from './components/CustomOrder'
 import Success from './components/Success'
 
 

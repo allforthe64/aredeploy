@@ -1,4 +1,4 @@
-import ContactForm from "./ContactForm"
+import OrderForm from "./OrderForm";
 import { useEffect } from "react"
 import { motion } from "framer-motion";
 
@@ -23,7 +23,7 @@ const OrderSimple = () => {
                 </div>
             </div>
         </motion.div>
-        <ContactForm />
+        <OrderForm />
     </div>
   )
 }

@@ -20,47 +20,7 @@ const Nav = () => {
     }
 
     console.log(auth?.accessToken)
-
-    /* return (
-        <nav className="text-white flex bg-neutral-900 h-14 pt-4" id="nav">
-            <Link className="navbar-brand text-white text text-xl pl-[3%] nav-link transition-color ease-in-out duration-200" to={"/"}>ARE Tahiti</Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <ul className="flex w-[70%] justify-around ml-[3%]">
-                <li className="nav-item active">
-                    <Link to={'/order'} className="nav-link text-white text text-base nav-link transition-color ease-in-out duration-200" >Order A Canoe <span className="sr-only">(current)</span></Link>
-                </li>
-                <li className="nav-item">
-                    <Link to={'/about'} className="nav-link text-white text nav-link transition-color ease-in-out duration-200">About Us</Link>
-                </li>
-                <li className="nav-item">
-                    <Link to={'/canoes'} className="nav-link text-white text nav-link transition-color ease-in-out duration-200">The Canoes</Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link text-white text nav-link transition-color ease-in-out duration-200" href="{% url 'reps' %}">Our Representatives</Link>
-                </li> 
-                {auth?.accessToken ? (
-                    <li className="nav-link text-white text nav-link transition-color ease-in-out duration-200 hover:cursor-pointer" onClick={() => handleLogout()}>
-                    Logout
-                    </li>
-                ) :
-                (
-                    <li className="nav-item">
-                    <Link to={'/login'} className="nav-link text-white text nav-link transition-color ease-in-out duration-200">Rep Login</Link>
-                    </li>
-                )
-                }
-                {auth?.accessToken && 
-                    <li className="nav-item">
-                        <Link to={'/admin'} className="nav-link text-white text nav-link transition-color ease-in-out duration-200">Admin Page</Link>
-                    </li>
-                }
-            </ul>
-        </nav>
-    ) */
-
+    
   const [menuOpen, setMenuOpen] = useState(false);
   const [size, setSize] = useState({
     width: 0,
@@ -79,16 +39,19 @@ const Nav = () => {
   }, []);
 
   useEffect(() => {
-    if (size.width > 768 && menuOpen) {
+    if (size.width < 768 && menuOpen) {
       setMenuOpen(false);
     }
-  }, [size.width, menuOpen]);
+  }, [size.width]);
 
   const menuToggleHandler = () => {
     if (size.width > 768) {
-        setMenuOpen(true)
+        return false
+    } else {
+      console.log('small menu')
+      setMenuOpen((p) => !p);
     }
-    setMenuOpen((p) => !p);
+    
   };
 
   return (
@@ -103,25 +66,19 @@ const Nav = () => {
           }`}
         >
           <ul>
-            <li onClick={menuToggleHandler}>
+            <li>
               <Link to="/">Home</Link>
             </li>
-            <li onClick={menuToggleHandler}>
+            <li>
               <Link to="/about">About</Link>
             </li>
-            <li onClick={menuToggleHandler}>
+            <li>
               <Link to="/canoes">The Canoes</Link>
             </li>
-            <li onClick={menuToggleHandler}>
+            <li>
               <Link to="/order">Ordering A Canoe</Link>
             </li>
 
-            {/* <Link to="/register">
-              <button className="btn">Register</button>
-            </Link>
-            <Link to="/login">
-              <button className="btn btn__login">Login</button>
-            </Link> */}
           </ul>
         </nav>
         <div className="header__content__toggle">
