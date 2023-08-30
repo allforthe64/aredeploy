@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Success = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  },[])
+  
   return (
     <div className='h-[80vh] flex flex-col justify-center items-center'>
       <p className='heading grey text-6xl mb-6 sm:max-md:text-4xl max-sm:text-3xl max-md:mb-2'>Thanks for your order!</p>
