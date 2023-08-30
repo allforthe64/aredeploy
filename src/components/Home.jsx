@@ -52,7 +52,7 @@ const Home = () => {
                 <motion.div className="flex justify-around max-lg:flex-col max-lg:items-center max-lg:space-y-10" initial={{y: 200, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{delay: 1.25, duration: 1}} viewport={{once: true}}>
                     <motion.div className="w-3/12 rounded-md bg-neutral-100 shadowed max-lg:w-7/12 px-4 pt-4 pb-8" >
                         <img src="./mana_8.JPG" alt="outrigger-1" className="h-[85%] w-full"/>
-                        <button type="submit" className="text text-xl py-px font-semibold orange orange-border mt-4 px-6 rounded-md orange-button transition-color ease-in-out duration-200 max-lg:w-7/12 max-sm:text-xs max-sm:w-full" to={'/canoes'}><Link>Get An Outrigger</Link></button>
+                        <button type="submit" className="text text-xl py-px font-semibold orange orange-border mt-4 px-6 rounded-md orange-button transition-color ease-in-out duration-200 max-lg:w-7/12 max-sm:text-xs max-sm:w-full"><Link to={'/canoes'}>Get An Outrigger</Link></button>
                     </motion.div>
                     <motion.div className="w-3/12 rounded-md bg-neutral-100 shadowed max-lg:w-7/12 px-4 pt-4 pb-8" >
                         <img src="./marara_6.JPG" alt="outrigger-2" className="h-[85%] w-full" />
